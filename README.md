@@ -1,10 +1,11 @@
 # Spackle
-
 Spackle sorts your Coverage.py result report, so you can identify gaps in test coverage faster.
+
+## Install
+`pip install spackle`
 
 ## Usage
 Simply run `spackle` after executing Coverage.py's run command, instead of running `coverage report -m`. Spackle will output the original coverage report and a new report that contains only multi line gaps in coverage, sorted by the amount of lines missing.
-
 
 ## Example
 
