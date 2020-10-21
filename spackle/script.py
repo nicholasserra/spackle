@@ -14,6 +14,8 @@ def main():
     coverages = []
     for line in process.stdout:
 
+        line = line.decode('utf8')
+
         # Write out original coverage report lines.
         sys.stdout.write(line)
 
@@ -27,7 +29,7 @@ def main():
             continue
 
         for missing in range_list:
-            line_numbers = map(int, missing.split('-'))
+            line_numbers = list(map(int, missing.split('-')))
             coverages.append({
                 'filename': filename,
                 'missing': missing,
@@ -52,3 +54,7 @@ def main():
         missing_output = c['missing'] + ' ' * (max_missing - len(c['missing']))
 
         sys.stdout.write('%s%s%s\n' % (filename_output, missing_output, c['difference']))
+
+
+if __name__ == '__main__':
+    main()
