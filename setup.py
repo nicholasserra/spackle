@@ -2,6 +2,9 @@
 
 from setuptools import setup
 
+with open('README.md', 'r') as fh:
+    long_description = fh.read()
+
 setup(
     name='spackle',
     version='0.0.3',
@@ -12,7 +15,8 @@ setup(
     url='https://github.com/nicholasserra/spackle/',
     keywords=['spackle', 'coverage', 'testing'],
     description='Help identify gaps in python code coverage.',
-    long_description=open('README.md').read(),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     download_url="https://github.com/nicholasserra/spackle/zipball/master",
     packages=['spackle'],
     entry_points={
