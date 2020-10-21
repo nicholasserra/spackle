@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='spackle',
-    version='0.0.2',
+    version='0.0.3',
     install_requires=['setuptools', 'coverage'],
     author='Nicholas Serra',
     author_email='nickserra@gmail.com',
